@@ -18,26 +18,26 @@ export default function NFTMarketplace() {
     mintPrice: 3.50,
     totalSupply: 3333,
   };
-  
+
   const mintedNFTs = [
     {
       id: 1,
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68c4c5a35e2d82bff3e5cc4c/30d9ddc9a_IRIS2.png",
+      image: "src/image/Iris.jpg",
       bgColor: "#fde047"
     },
     {
       id: 2,
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68c4c5a35e2d82bff3e5cc4c/30d9ddc9a_IRIS2.png",
+      image: "src/image/Iris1.png",
       bgColor: "#ef4444"
     },
     {
       id: 3,
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68c4c5a35e2d82bff3e5cc4c/30d9ddc9a_IRIS2.png",
+      image: "src/image/Iris2.png",
       bgColor: "#d1d5db"
     },
     {
       id: 4,
-      image: "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/68c4c5a35e2d82bff3e5cc4c/30d9ddc9a_IRIS2.png",
+      image: "src/image/Iris3.png",
       bgColor: "#fbbf24"
     }
   ];
@@ -55,13 +55,13 @@ export default function NFTMarketplace() {
       <Header />
       <main className="max-w-screen-xl mx-auto p-4 sm:p-6 lg:p-8">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-          
+
           {/* Left Side: NFT Image */}
           <div className="lg:col-span-2">
             <div className="aspect-square bg-[#111827] border border-gray-700 rounded-xl p-1.5">
-              <img 
-                src={nftData.image} 
-                alt={nftData.title} 
+              <img
+                src={nftData.image}
+                alt={nftData.title}
                 className="w-full h-full object-cover rounded-lg"
               />
             </div>
@@ -69,7 +69,7 @@ export default function NFTMarketplace() {
 
           {/* Right Side: Details & Minting */}
           <div className="lg:col-span-3">
-            <NFTDetails 
+            <NFTDetails
               nft={nftData}
               mintedCount={mintedCount}
               quantity={quantity}
